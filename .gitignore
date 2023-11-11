@@ -177,6 +177,7 @@ desktop.ini
 # tmp folder for temp usage
 tmp/
 temp/
+library/
 
 # external libs zip
 *.zip
