@@ -271,7 +271,7 @@ export class Main extends Component {
         console.timeEnd("JSON.parse");
 
         callback && callback();
-        file.remove();
+        //file.remove();
         director.loadScene("Game");
     }
 
@@ -367,8 +367,9 @@ export class Main extends Component {
         else {
             r = r.replace(/%2F/g, '/').replace(/%3A/g, ':')
             var parsedUrl = r.split('=')[1].split('/')
+            var file_name = parsedUrl.pop()
             // 分别判定域名和文件格式是否符合规定
-            if (parsedUrl[2] == 'service-e5fgw204-1251735782.hk.apigw.tencentcs.com' && parsedUrl.pop().split('.')[1] == 'lzma') {
+            if (parsedUrl[2] == 'kywch.github.io' && file_name.split('.')[1] == 'lzma') {
                 return decodeURI(r.split('=')[1])
             }
             else {
