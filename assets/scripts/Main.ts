@@ -369,7 +369,7 @@ export class Main extends Component {
             var parsedUrl = r.split('=')[1].split('/')
             var file_name = parsedUrl.pop()
             // 分别判定域名和文件格式是否符合规定
-            if (parsedUrl[2] == 'kywch.github.io' && file_name.split('.')[1] == 'lzma') {
+            if (parsedUrl[2] == 'kywch.github.io' && file_name.split('.').pop() == 'lzma') {
                 return decodeURI(r.split('=')[1])
             }
             else {
